@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
@@ -45,6 +47,7 @@ export default function Home() {
           <Button
             size="lg"
             className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-6 shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30 transition-all duration-300"
+            onClick={() => document.getElementById("demo-form")?.scrollIntoView({ behavior: "smooth" })}
           >
             Book My Free Demo
           </Button>
@@ -281,8 +284,12 @@ export default function Home() {
           </h2>
           <Card className="bg-card border-primary border-2 p-12 shadow-2xl shadow-primary/20">
             <div className="mb-10">
-              <p className="text-6xl font-bold text-primary mb-3">R3,990</p>
+              <div className="flex items-center justify-center gap-4 mb-3">
+                <p className="text-3xl font-semibold text-muted-foreground line-through">R8,990</p>
+                <p className="text-6xl font-bold text-primary">R3,990</p>
+              </div>
               <p className="text-xl text-muted-foreground">per month</p>
+              <p className="text-sm text-accent font-semibold mt-2">Special Launch Price</p>
             </div>
             <div className="space-y-5 text-left mb-10">
               <div className="flex items-center gap-3">
@@ -337,6 +344,7 @@ export default function Home() {
             <Button
               size="lg"
               className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg py-6 shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30 transition-all duration-300"
+              onClick={() => document.getElementById("demo-form")?.scrollIntoView({ behavior: "smooth" })}
             >
               Book My Free Demo
             </Button>
@@ -351,7 +359,7 @@ export default function Home() {
       {/* About Section */}
       <section className="section-spacing px-4 bg-secondary">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground heading-spacing text-balance">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground heading-spacing text-center text-balance">
             Who's Behind LeadLabs?
           </h2>
           <div className="space-y-6">
@@ -376,7 +384,7 @@ export default function Home() {
       </section>
 
       {/* CTA/Commitment Section */}
-      <section className="section-spacing px-4">
+      <section id="demo-form" className="section-spacing px-4">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground heading-spacing text-center text-balance">
             Ready to Stop Losing Leads?

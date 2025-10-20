@@ -16,13 +16,14 @@
   --secondary-foreground: oklch(1 0 0);
   --muted: oklch(0.22 0 0);
   --muted-foreground: oklch(0.75 0 0);
-  --accent: oklch(0.52 0.19 15); /* Brighter red for CTAs */
+  /* Added electric blue accent color for CTAs and highlights */
+  --accent: oklch(0.65 0.25 240); /* Electric blue */
   --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(1 0 0);
   --border: oklch(0.25 0 0);
   --input: oklch(0.22 0 0);
-  --ring: oklch(0.52 0.19 15);
+  --ring: oklch(0.65 0.25 240);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -158,5 +159,14 @@
 
   .heading-spacing {
     @apply mb-8 md:mb-12;
+  }
+
+  /* Added button gradient and enhanced shadow effects */
+  .btn-gradient {
+    @apply bg-gradient-to-r from-accent to-accent/80 hover:from-accent/90 hover:to-accent/70;
+  }
+
+  .btn-shadow {
+    @apply shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/40;
   }
 }
